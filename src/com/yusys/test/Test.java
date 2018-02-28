@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Test extends Constance {
 
 	protected String name = "Test";
+	static int i;
 	
 	public static void main(String[] args){
 		/*ArrayList l = new ArrayList();
@@ -117,14 +118,15 @@ public class Test extends Constance {
 		}
 		*/
 		
-		String Bootstrap_Loader = System.getProperty("sun.boot.class.path");
+		/*String Bootstrap_Loader = System.getProperty("sun.boot.class.path");
 		System.out.println(Bootstrap_Loader);
 		String Extended_Loader = System.getProperty("java.ext.dirs");
 		System.out.println(Extended_Loader);
 		String AppClass_Loader = System.getProperty("java.class.path");
 		System.out.println(AppClass_Loader);
 		
-		Bootstrap_Loader.split("|");
+		Bootstrap_Loader.split("|");*/
+		
 	}
 	
 	public void print(){
