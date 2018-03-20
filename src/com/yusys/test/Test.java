@@ -23,6 +23,10 @@ public class Test extends Constance {
 
 	protected String name = "Test";
 	static int i;
+	/*private static native void registerNatives();
+    static {
+        registerNatives();
+    }*/
 	
 	public static void main(String[] args){
 		/*ArrayList l = new ArrayList();
@@ -126,10 +130,56 @@ public class Test extends Constance {
 		System.out.println(AppClass_Loader);
 		
 		Bootstrap_Loader.split("|");*/
+		Runnable r = () -> {String s = "hello";s = "ss";};
+		r.run();
+		//System.out.println(new Integer(() -> 33));
+		/*Runnable r = () -> System.out.println("hello world");
+		r.run();*/
+		//Boolean b = new Boolean(true);
+		/*byte b = -128;
+		subs s = new subs("a","b");
+		s.print();*/
+        //System.out.println(s.s1());
+		
+		/*for(int i=0;i<50;i++){
+			sub su = new sub();
+			System.out.println(su.getClass());
+		}*/
+		
+		int a = 1;
+		System.out.println(a >>> 2);
+		
 		
 	}
 	
 	public void print(){
 		System.out.println(name);
+		synchronized(this){
+			System.out.println(this);
+		}
 	}
+	
+	public static class sub {
+		 public static  void print(){
+			 System.out.println("sub");
+		 }
+	}
+	public static final class subs extends sub{
+		public subs(String s){
+			
+		}
+		public static void s1(){
+			sub.print();
+		}
+		public subs(String idname,String value){
+			this(idname);
+			System.out.println(this);
+		}
+		
+	}
+	
+	public String sq(Void a){
+		return "";
+	}
+	
 }
